@@ -5,7 +5,7 @@
     "ng": "ng",
     "server": "nodemon node src/app/backend/index.js",
     "start": "npm run serve:all",
-    "serve:web": "ng serve --port 4300 --open",
+    "serve:web": "ng serve --port 4300",
     "serve:api": "node src/app/backend/index.js",
     "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:web\"",
     "build": "ng build",
