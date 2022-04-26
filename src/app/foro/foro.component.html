@@ -1,0 +1,37 @@
+<div class="comentario">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{pagina.titulo}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card class="flex-container" *ngFor="let comentario of comentarios" (click)="selectComment(comentario)">
+
+        <h3 matline class="cardContainer">{{comentario.comentario}}</h3>
+        <div *ngIf="comentario._id">
+        <button mat-icon-button color="warn" (click)="deleteComment(comentario._id); $event.stopImmediatePropagation()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      </mat-card>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="response">
+  <mat-card>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+      <mat-form-field class="full-width" appearance="fill">
+        <br>
+        <textarea matInput placeholder="Respuesta" [(ngModel)]="texto" name="name" required type="text">
+    </textarea>
+      </mat-form-field>
+      <button type="submit" [disabled]="form.invalid" mat-button color="primary">Responder</button>
+    </form>
+  </mat-card>
+</div>
+<button (click)="getAllPages()">traer todas las paginas</button>
+<button (click)="getPage()">traer una pagina</button>
+<button (click)="deletePage()">borrar una pagina</button>

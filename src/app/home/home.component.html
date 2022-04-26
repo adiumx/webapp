@@ -1,0 +1,26 @@
+<div class="container">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h3 matline>Lista de topicos </h3>
+    </mat-card-title>
+  </mat-card-header>
+  <button mat-raised-button color="primary" (click)="openDialog()">Nuevo</button>
+</mat-card>
+
+</div>
+<div class="temas">
+      <mat-card class="listaTemas" *ngFor="let entrada of paginas ; index as i">
+        <mat-card-title>
+        <a [routerLink]="['/foro', entrada._id]" routerLinkActive="active">
+          <button mat-stroked-button color="accent">
+            {{entrada.titulo}}
+          </button>
+          </a>
+        </mat-card-title>
+        <mat-card-content><h3>{{entrada.descripcion}}</h3></mat-card-content>
+
+      </mat-card>
+
+    </div>
+
