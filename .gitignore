@@ -10,6 +10,7 @@
 my-store/node_modules
 npm-debug.log
 yarn-error.log
+notas.txt
 
 # IDEs and editors
 .idea/
