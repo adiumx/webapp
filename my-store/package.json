@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "server": "nodemon node src/app/backend/index.js",
+    "server": "nodemon node my-store/src/app/backend/index.js",
     "start": "npm run serve:all",
     "serve:web": "ng serve --port 4300",
-    "serve:api": "node src/app/backend/index.js",
+    "serve:api": "node ../api/index.js",
     "serve:all": "concurrently \"npm run serve:api\" \"npm run serve:web\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-
     "backend": "json-server --watch ./src/app/backend/db.json"
   },
   "private": true,
@@ -28,7 +27,7 @@
     "body-parser": "^1.20.0",
     "concurrently": "^7.1.0",
     "cors": "^2.8.5",
-    "express": "^4.17.3",
+    "express": "^4.18.1",
     "mongoose": "^6.3.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
