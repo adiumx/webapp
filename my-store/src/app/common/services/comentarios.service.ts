@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Comentarios } from '../models/comentario';
-const BASE_URL = '';
+const BASE_URL = 'http://localhost:3000';
 @Injectable({
   providedIn: 'root'
 })
