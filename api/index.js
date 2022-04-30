@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const app = require('./app')
 
 
-mongoose.connect(port, (err, res)=>{
+mongoose.connect('mongodb://localhost:27017/Paginas', (err, res)=>{
   if(err) throw err
   console.log('conección a la base de datos establecida')
   app.listen(port, ()=>{
