@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Pagina } from '../models/pagina';
 import { map } from 'rxjs/operators';
 
-const BASE_URL = 'http://localhost:3000¿';
+const BASE_URL = 'https://lemon-bush-02d99f710.1.azurestaticapps.net';
 @Injectable({
   providedIn: 'root'
 })
